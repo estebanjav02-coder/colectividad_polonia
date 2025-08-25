@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polonia - Peña de Colectividades</title>
+  <style>
+    /* ===================== */
+    /* ESTILOS BASE EXISTENTES + MEJORAS */
+    /* ===================== */
+
+    body {
+      font-family: system-ui, sans-serif;
+      margin: 0;
+      background-color: #fff;
+      color: #212529;
+      line-height: 1.6;
+      text-align: justify; /* ✅ Texto justificado */
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: #0d6efd;
+      color: #fff;
+      padding: 1rem;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    nav a:hover, nav a:focus {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    /* ===================== */
+    /* ESCALA TIPOGRÁFICA FLUIDA PARA ENCABEZADOS */
+    /* ===================== */
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 700;
+      scroll-margin-top: 90px; /* ✅ Evita que el header tape los títulos */
+    }
+
+    h1 {
+      font-size: clamp(2rem, 3vw + 1rem, 3rem);
+      font-weight: 800;
+    }
+
+    h2 {
+      font-size: clamp(1.5rem, 2vw + .75rem, 2.25rem);
+    }
+
+    h3 {
+      font-size: clamp(1.25rem, 1.2vw + .6rem, 1.75rem);
+    }
+
+    h4 {
+      font-size: clamp(1.125rem, .8vw + .55rem, 1.375rem);
+    }
+
+    /* ===================== */
+    /* PERMALINK EN TÍTULOS */
+    /* ===================== */
+    .permalink {
+      margin-left: .5rem;
+      opacity: 0.6;
+      text-decoration: none;
+      font-size: 0.85em;
+    }
+
+    .permalink:hover, .permalink:focus {
+      opacity: 1;
+    }
+
+    /* ===================== */
+    /* TABLA DE CONTENIDO (ToC) */
+    /* ===================== */
+    .toc {
+      border: 2px solid #0d6efd;
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      background: #f8f9fa;
+    }
+
+    .toc h2 {
+      margin-top: 0;
+    }
+
+    .toc ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .toc a {
+      text-decoration: none;
+      color: #0d6efd;
+    }
+
+    .toc a[aria-current="true"] {
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    /* ===================== */
+    /* BOTÓN VOLVER ARRIBA */
+    /* ===================== */
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #0d6efd;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: none;
+    }
+
+    .back-to-top:focus {
+      outline: 3px solid #fff;
+    }
+
+    /* Tooltip copiar enlace */
+    .tooltip {
+      position: absolute;
+      background: #212529;
+      color: #fff;
+      padding: 2px 6px;
+      font-size: 0.8rem;
+      border-radius: 4px;
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="polonia" tabindex="-1">Polonia</h1>
+    <nav>
+      <ul>
+        <li><a href="#indice">Índice</a></li>
+        <li><a href="#galeria">Galería</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===================== -->
+    <!-- TABLA DE CONTENIDO -->
+    <!-- ===================== -->
+    <section id="indice" class="toc">
+      <h2>Índice</h2>
+      <ul id="toc-list"><!-- ✅ Se rellena dinámicamente con JS --></ul>
+    </section>
+
+    <!-- ===================== -->
+    <!-- SECCIONES DE CONTENIDO -->
+    <!-- ===================== -->
+
+    <section id="1-introduccion">
+      <h2 tabindex="-1">1. Introducción <a href="#1-introduccion" class="permalink" aria-label="Enlace permanente a Introducción">🔗</a></h2>
+      <p>Polonia es un país de Europa Central con una rica historia y cultura...</p>
+    </section>
+
+    <section id="2-generalidades">
+      <h2 tabindex="-1">2. Generalidades <a href="#2-generalidades" class="permalink" aria-label="Enlace permanente a Generalidades">🔗</a></h2>
+      <h3 id="2-1-ubicacion" tabindex="-1">2.1. Ubicación <a href="#2-1-ubicacion" class="permalink" aria-label="Enlace permanente a Ubicación">🔗</a></h3>
+      <p>Ubicada en Europa Central, Polonia limita con Alemania, República Checa...</p>
+    </section>
+
+    <section id="3-relieve-clima-hidrografia">
+      <h2 tabindex="-1">3. Relieve, Clima e Hidrografía <a href="#3-relieve-clima-hidrografia" class="permalink" aria-label="Enlace permanente a Relieve, Clima e Hidrografía">🔗</a></h2>
+      <h3 id="3-1-relieve" tabindex="-1">3.1. Relieve <a href="#3-1-relieve" class="permalink">🔗</a></h3>
+      <p>Polonia cuenta con llanuras, montañas y regiones montañosas como los Cárpatos...</p>
+      <h3 id="3-2-clima" tabindex="-1">3.2. Clima <a href="#3-2-clima" class="permalink">🔗</a></h3>
+      <p>El clima es templado con inviernos fríos y veranos cálidos...</p>
+      <h3 id="3-3-hidrografia" tabindex="-1">3.3. Hidrografía <a href="#3-3-hidrografia" class="permalink">🔗</a></h3>
+      <p>Los ríos principales son el Vístula y el Oder...</p>
+    </section>
+
+    <!-- Más secciones (Historia, Demografía, Economía, Cultura, Inmigración, Conclusión, Bibliografía) seguirían igual con IDs y numeración)-->
+
+    <!-- ===================== -->
+    <!-- SECCIÓN GALERÍA -->
+    <!-- ===================== -->
+    <section id="galeria">
+      <h2 tabindex="-1">Galería <a href="#galeria" class="permalink">🔗</a></h2>
+      <p>Aquí se mostrarán imágenes representativas de Polonia y la Peña de Colectividades.</p>
+    </section>
+  </main>
+
+  <!-- ===================== -->
+  <!-- BOTÓN VOLVER ARRIBA -->
+  <!-- ===================== -->
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">↑</button>
+
+  <!-- ===================== -->
+  <!-- JAVASCRIPT FUNCIONALIDADES -->
+  <!-- ===================== -->
+  <script>
+    // =====================
+    // GENERAR TABLA DE CONTENIDO AUTOMÁTICA
+    // =====================
+    const tocList = document.getElementById('toc-list');
+    const headings = document.querySelectorAll('h2, h3');
+
+    headings.forEach(h => {
+      const id = h.parentElement.id || h.id;
+      const text = h.textContent.replace('🔗','').trim();
+
+      if (id) {
+        const li = document.createElement('li');
+        li.style.marginLeft = h.tagName === 'H3' ? '1.5rem' : '0';
+
+        const link = document.createElement('a');
+        link.href = `#${id}`;
+        link.textContent = text;
+
+        // Estimar tiempo de lectura (200 palabras/min aprox)
+        const section = document.getElementById(id);
+        const words = section ? section.innerText.split(/\s+/).length : 0;
+        const minutes = Math.max(1, Math.round(words / 200));
+        link.textContent += ` (${minutes} min)`;
+
+        li.appendChild(link);
+        tocList.appendChild(li);
+      }
+    });
+
+    // =====================
+    // SCROLLSPY PARA ÍNDICE
+    // =====================
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const link = tocList.querySelector(`a[href="#${entry.target.id}"]`);
+        if (link) link.setAttribute('aria-current', entry.isIntersecting ? 'true' : 'false');
+      });
+    }, { rootMargin: "-50% 0px -50% 0px", threshold: 0 });
+
+    document.querySelectorAll('section').forEach(sec => observer.observe(sec));
+
+    // =====================
+    // BOTÓN VOLVER ARRIBA
+    // =====================
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // =====================
+    // COPIAR ENLACE EN PERMALINK
+    // =====================
+    const permalinks = document.querySelectorAll('.permalink');
+    permalinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const url = window.location.origin + window.location.pathname + link.getAttribute('href');
+        navigator.clipboard.writeText(url);
+
+        // Tooltip temporal
+        const tooltip = document.createElement('span');
+        tooltip.className = 'tooltip';
+        tooltip.textContent = 'Enlace copiado';
+        document.body.appendChild(tooltip);
+        const rect = link.getBoundingClientRect();
+        tooltip.style.left = rect.left + window.scrollX + 'px';
+        tooltip.style.top = rect.top + window.scrollY - 25 + 'px';
+        tooltip.style.opacity = 1;
+        setTimeout(() => tooltip.remove(), 1500);
+      });
+    });
+  </script>
+</body>
+</html>

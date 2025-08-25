@@ -1,0 +1,186 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h2 {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery figure, .section-images figure {
+    margin: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background: #fff;
+    transition: transform 0.3s ease;
+}
+
+.gallery figure:hover, .section-images figure:hover {
+    transform: scale(1.05);
+}
+
+.gallery img, .section-images img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+figcaption {
+    padding: 10px;
+    font-size: 0.9em;
+    text-align: center;
+    background: #f8f8f8;
+    color: #444;
+}
+
+.section-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px 0;
+    justify-content: center;
+}
+
+.section-images figure {
+    flex: 1 1 250px;
+    max-width: 300px;
+}
+/* Estilos generales para móviles */
+body {
+  font-size: 14px; /* Reduce el tamaño de fuente base para pantallas pequeñas */
+}
+
+h1 {
+  font-size: 1.8rem; /* Ajusta el tamaño del título principal */
+}
+
+h2 {
+  font-size: 1.3rem; /* Ajusta el tamaño de los subtítulos */
+}
+
+h3 {
+  font-size: 1.1rem; /* Ajusta el tamaño de los sub-subtítulos */
+}
+
+.container {
+  padding: 0.75rem; /* Reduce el padding general del contenedor */
+}
+
+/* Navegación */
+.nav {
+  flex-direction: column; /* Apila los elementos de navegación verticalmente */
+  align-items: flex-start; /* Alinea los elementos a la izquierda */
+  padding: 0.5rem; /* Ajusta el padding de la navegación */
+}
+
+.nav a {
+  width: 100%; /* Hace que los enlaces de navegación ocupen todo el ancho */
+  text-align: center; /* Centra el texto de los enlaces */
+  margin-bottom: 0.25rem; /* Añade un pequeño margen entre enlaces */
+}
+
+.brand {
+  margin-bottom: 0.5rem; /* Añade espacio debajo del logo */
+}
+
+/* Sección Hero */
+.hero-inner {
+  padding: 1.5rem 0.75rem; /* Ajusta el padding de la sección hero */
+  text-align: center; /* Centra el contenido del hero */
+}
+
+.hero h1 {
+  font-size: 2rem; /* Ajusta el tamaño del título en el hero */
+}
+
+.btn {
+  display: block; /* Hace que los botones ocupen todo el ancho */
+  margin-bottom: 0.5rem; /* Añade margen entre los botones */
+  width: 100%; /* Asegura que los botones ocupen el 100% del ancho disponible */
+}
+
+/* Tarjetas y Grid */
+.card {
+  padding: 0.75rem; /* Reduce el padding de las tarjetas */
+  margin-bottom: 1rem; /* Añade margen inferior a las tarjetas */
+}
+
+.grid {
+  grid-template-columns: 1fr !important; /* Fuerza una sola columna para el grid en móviles */
+  gap: 0.75rem; /* Reduce el espacio entre elementos del grid */
+}
+
+/* Galería de imágenes */
+.gallery {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajusta el tamaño de las imágenes en la galería */
+  gap: 0.5rem; /* Reduce el espacio entre imágenes */
+}
+
+.gallery figure {
+  margin-bottom: 0.5rem; /* Reduce el margen inferior de las figuras en la galería */
+}
+
+.gallery img {
+  border-radius: 0.5rem; /* Ajusta el radio del borde de las imágenes */
+}
+
+/* Pie de página */
+footer {
+  padding: 1.5rem 0.75rem; /* Ajusta el padding del pie de página */
+  text-align: center; /* Centra el texto del pie de página */
+}
+
+/* Media Queries para pantallas más grandes (opcional, para refinar) */
+@media (min-width: 576px) {
+  .nav {
+    flex-direction: row; /* Vuelve a la disposición horizontal en pantallas más grandes */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center;
+  }
+
+  .nav a {
+    width: auto; /* Restaura el ancho automático para los enlaces */
+    margin-bottom: 0;
+  }
+
+  .brand {
+    margin-bottom: 0;
+  }
+
+  .btn {
+    display: inline-block; /* Vuelve a la disposición inline-block para los botones */
+    width: auto;
+    margin-right: 0.5rem; /* Añade margen a la derecha entre botones */
+    margin-bottom: 0;
+  }
+
+  .hero-inner {
+    text-align: left; /* Alinea el contenido del hero a la izquierda */
+  }
+}
+
+@media (min-width: 768px) {
+  .grid.cols-2 {
+    grid-template-columns: 1fr 1fr; /* Vuelve a dos columnas para el grid */
+  }
+}
+
+@media (min-width: 992px) {
+  .grid.cols-3 {
+    grid-template-columns: 1fr 1fr 1fr; /* Vuelve a tres columnas para el grid */
+  }
+}
